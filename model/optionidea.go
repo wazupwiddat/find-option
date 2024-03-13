@@ -11,17 +11,6 @@ type OptionIdea struct {
 	ReturnIfFlat       float64
 	ReturnIfAssigned   float64
 }
-type ByReturnIfFlat []OptionIdea
-
-func (a ByReturnIfFlat) Len() int           { return len(a) }
-func (a ByReturnIfFlat) Less(i, j int) bool { return a[i].ReturnIfFlat > a[j].ReturnIfFlat }
-func (a ByReturnIfFlat) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
-
-type ByReturnIfAssigned []OptionIdea
-
-func (a ByReturnIfAssigned) Len() int           { return len(a) }
-func (a ByReturnIfAssigned) Less(i, j int) bool { return a[i].ReturnIfAssigned > a[j].ReturnIfAssigned }
-func (a ByReturnIfAssigned) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
 
 type OptionIdeaFilterCondition func(idea OptionIdea) bool
 
