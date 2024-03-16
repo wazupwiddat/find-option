@@ -115,7 +115,7 @@ func nextSoFridays(weeks int) []time.Time {
 	// Get today's date
 	today := zeroOutTime(time.Now().UTC())
 
-	// Find the next Friday
+	// Find the first Friday
 	for i := 0; i < 7; i++ {
 		if today.Weekday() == time.Friday {
 			break
