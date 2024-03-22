@@ -15,6 +15,8 @@ Leverages https://github.com/piquette/finance-go
          -weeksout int
     	      How many weeks out do you want to look.  Default: 5 (default 5)
 
+    % ./bin/foption -ticker=adbe -weeksout=7
+
 ## Strategies
     type Strategy interface {
 	    Run(ideas []model.OptionIdea, q *finance.Quote)
@@ -31,3 +33,5 @@ Leverages https://github.com/piquette/finance-go
   * ThreePercentPremiumMaxAssignPuts
 
 I use the following to decide which option I want to <i>WRITE/SELL</i> when wheeling.
+
+https://github.com/wazupwiddat/find-option/tree/main/strategies
