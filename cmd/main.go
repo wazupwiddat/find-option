@@ -17,7 +17,7 @@ import (
 
 func main() {
 	ticker := flag.String("ticker", "AAPL", "This is the ticker to the underlying security you want to find option ideas.")
-	weeksOut := flag.Int("weeksout", 5, "How many weeks out do you want to look.  Default: 5")
+	weeksOut := flag.Int("weeksout", 5, "How many weeks out do you want to look.")
 	flag.Parse()
 
 	// current quote
